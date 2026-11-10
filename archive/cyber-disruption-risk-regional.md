@@ -18,72 +18,134 @@
 
 ---
 
-## 2. Europe
+## 2. Europe – Expanded
 
-### Documented patterns (High confidence on existence of incidents)
+### 2.1 Poland – Energy / Renewables Intrusion (Late December 2025)
 
-| Event / Pattern | Approximate period | Key public facts | Attribution (public) | Outcome |
-|-----------------|--------------------|------------------|----------------------|--------|
-| Poland energy / renewables intrusion | Late Dec 2025 | Targeting of wind, solar and CHP control systems; internet-facing edge devices; default credentials; wiper activity on OT; loss of view/control; some devices damaged | Russian-linked (Sandworm / Electrum / FSB-linked assessments in public reporting); amplified by CISA | Near-miss; no sustained consumer blackout reported; operator response credited with preventing wider impact |
-| France & multi-country refrigeration / cold-chain sabotage | Oct–Nov 2026 | ~700 commercial sites in France; temperature manipulation; later reports of similar issues in other European countries; also blood-product cold stores | French authorities: Shahid Kaveh (IRGC-CEC) | Significant economic and food-safety impact; not a power blackout |
-| Broader EU hybrid threat posture | 2022–2026 | Increased reporting of attacks on energy-related infrastructure; official simulations and reinforced protection of electricity networks | Multiple state-linked actors discussed in official statements | Heightened preparedness; no continent-wide cyber blackout publicly confirmed |
+**Public facts (High confidence on occurrence)**  
+- Coordinated cyber activity targeted operational technology at roughly 30 sites, including wind and solar dispatch/control systems and combined heat and power (CHP) plants.
+- Initial access reported via internet-facing edge devices (including FortiGate devices lacking multifactor authentication and using weak/reused credentials in public descriptions).
+- Subsequent access to OT control devices that used default credentials (equipment from multiple vendors including Hitachi, Mikronika and Moxa cited in public reporting).
+- Effects included: loss of view and control between facilities and distribution system operators; destruction of data on HMIs; corruption of firmware on some OT devices (“bricking” reported by technical responders).
+- Wiper malware activity was reported on compromised systems.
 
-**Risk characteristics visible in open sources**
-- Preference for internet-exposed edge and OT devices
-- Use of default or weak credentials
-- Focus on distributed energy resources and control/monitoring systems
-- Combination of technical disruption and (in some cases) public or hybrid signalling
+**Attribution (public)**  
+- Polish authorities and subsequent technical reporting linked the activity to Russian state-linked actors (assessments referencing Sandworm / Electrum and FSB-linked units appear in open sources).
+- CISA later amplified lessons from the Polish CERT report for critical infrastructure operators internationally.
 
-**Investigative note:** The Poland case is currently one of the clearest public near-miss examples of cyber activity against European energy control systems short of a full blackout.
+**Outcome**  
+- No sustained consumer blackout was publicly confirmed.
+- Polish officials stated the country came close to a serious disruption (“we brushed against a blackout”).
+- Operator response and existing grid resilience measures were credited with limiting impact.
+- Some OT equipment required replacement or significant recovery effort.
 
----
+**Defensive lessons emphasised in public reporting**  
+- Internet-exposed edge devices remain a high-priority risk surface.
+- Default credentials on OT devices continue to appear in real incidents.
+- Distributed energy resources (wind, solar, smaller CHP) can present softer targets than traditional large thermal plants.
 
-## 3. United States
+### 2.2 France & Multi-Country Cold-Chain / Refrigeration Sabotage (October–November 2026)
 
-### Documented patterns
+**Public facts (High confidence)**  
+- Night of 11–12 October 2026: remote manipulation of refrigeration controllers at approximately 700 commercial sites across France (supermarkets and related food facilities).
+- Controllers (including Danfoss and Dixell equipment in public reporting) had temperature/defrost settings altered, causing large-scale food spoilage and at least 15 fires.
+- Later reports described similar refrigeration issues in other European countries and an incident affecting cold stores of the French national blood service.
+- French authorities (CERT-FR / C4, Parquet de Paris, MFA) publicly attributed the operation to the IRGC-CEC unit **Shahid Kaveh**, naming three individuals and linking the activity to the CyberAv3ngers persona family.
 
-| Pattern | Public facts | Attribution notes | Outcome / status |
-|---------|--------------|-------------------|------------------|
-| Water & wastewater PLC targeting | Multiple states (including Minnesota, Georgia, New Jersey and others); internet-exposed PLCs (Rockwell and others); some operational disruption and advisories | Iran-linked activity and CyberAv3ngers-associated claims appear in public reporting and CISA-related context | Localised operational impact; no national power blackout |
-| Critical infrastructure reconnaissance & access attempts | Power companies among sectors targeted in broader campaigns; edge-device exploitation patterns noted | China-nexus and Russia-linked activity reported in separate public cases | Primarily espionage or pre-positioning in public descriptions; disruption of specific campaigns by authorities |
-| Systemic concern | Persistent CISA focus on internet-exposed OT assets and OEM partnerships to reduce exposure | — | High official priority; no major sustained cyber-induced blackout publicly confirmed in recent years |
+**Outcome**  
+- Significant economic and food-safety impact; not a power-grid blackout.
+- Demonstrates that cyber disruption of industrial control systems can produce large-scale physical and societal effects outside the electricity sector.
 
-**Risk characteristics**
-- High volume of internet-exposed industrial devices remains a recurring theme in official guidance
-- Water sector has seen more publicly confirmed disruptive activity than the bulk power system in recent open reporting
-- Strong public–private information sharing and rapid advisory cycle
+**Relationship to energy risk**  
+- Same broad class of weakness (internet-reachable or poorly segmented industrial controllers, weak authentication, remote manipulation of process parameters) appears in both the Polish energy near-miss and the French refrigeration campaign.
 
----
+### 2.3 Broader European Context
 
-## 4. South Africa
-
-### Documented patterns
-
-| Pattern | Public facts | Notes |
-|---------|--------------|-------|
-| Physical attacks on electricity infrastructure | Repeated vandalism, theft and armed interference with substations and related assets causing localised outages | Dominant publicly reported cause of infrastructure-related outages in recent open sources |
-| Cyber vulnerability research | Academic and technical work on cyber risks to distributed generation (including solar PV integration) and grid stability under attack scenarios | Research-level; not equivalent to confirmed large-scale cyber blackout incidents |
-| Structural load-shedding | Long-standing capacity and maintenance challenges | Not primarily attributed to cyber causes in public reporting |
-
-**Risk characteristics**
-- Physical security of grid assets is a highly visible public issue
-- Cyber risk to distributed energy resources is acknowledged in research but less prominently featured in incident reporting than in Europe or the US
-- Hybrid (physical + potential cyber) risk surface exists but public confirmed cyber-blackout cases remain scarce
+- Official European and national statements since 2022 have repeatedly highlighted hybrid threats to energy infrastructure.
+- France announced reinforced protection measures for electricity networks and planned blackout simulations.
+- Eurelectric and national authorities have documented multiple cyber incidents against the European energy sector since 2022.
+- Historical reference cases (Ukraine 2015 and 2016 grid attacks) remain the primary confirmed examples of cyber-induced power outages in the wider European neighbourhood.
 
 ---
 
-## 5. Asia
+## 3. United States – Expanded
 
-### Documented patterns (more limited public disruption reporting)
+### 3.1 Water and Wastewater Sector PLC Activity
 
-| Pattern | Public facts | Notes |
-|---------|--------------|-------|
-| Espionage against critical infrastructure & supply chain | Campaigns reported against government and critical infrastructure organisations across many countries; includes power-equipment suppliers and energy-related entities | Primarily described as intelligence collection rather than destructive blackout operations in open sources |
-| Regional variation | Public reporting of destructive cyber effects on power systems is less frequent than in the European near-miss cases above | Absence of reporting ≠ absence of capability or interest |
+**Public facts**  
+- Multiple states reported targeting of water and wastewater systems (Minnesota, Georgia, New Jersey and others cited in open reporting).
+- Activity focused on internet-exposed programmable logic controllers (PLCs), including Rockwell Automation devices and later references to Schneider Electric and Siemens equipment.
+- Some sites experienced temporary operational disruption; boil-water advisories were issued in limited cases and later lifted after testing.
+- CISA and partner agencies issued warnings about expanded targeting of vulnerable PLCs in water and energy sectors.
 
-**Risk characteristics**
-- Strong emphasis in public reporting on espionage and supply-chain access
-- Fewer independently confirmed, large-scale cyber-induced blackout events in recent open sources compared with the European energy near-miss cases
+**Attribution notes (public)**  
+- Iran-linked activity and claims associated with CyberAv3ngers / related personas appear in public reporting and private-sector analysis.
+- Official U.S. statements have emphasised the vulnerability of exposed industrial devices rather than always naming a single definitive actor for every incident.
+
+**Outcome**  
+- Localised impact; no national-scale power blackout.
+- Reinforced official focus on removing internet exposure of industrial control devices.
+
+### 3.2 Broader Critical Infrastructure Targeting
+
+- Public reporting describes China-nexus campaigns that included power companies, telecommunications, hospitals and government agencies among targets (primarily characterised as espionage / access operations).
+- Russia-linked activity against energy-sector organisations and edge devices has also been described in technical reporting.
+- CISA has launched programmes (including OEM partnerships) aimed at identifying and reducing internet-exposed OT assets across critical infrastructure.
+
+### 3.3 Overall U.S. Risk Picture from Open Sources
+
+- No major sustained cyber-induced blackout of the bulk power system has been publicly confirmed in recent years.
+- The water sector has seen more publicly acknowledged disruptive cyber activity than the high-voltage grid.
+- Persistent official messaging centres on the danger of internet-exposed OT and the need for basic cyber hygiene (credential management, segmentation, monitoring).
+
+---
+
+## 4. South Africa – Expanded
+
+### 4.1 Dominant Public Pattern: Physical Attacks on Grid Assets
+
+**Public facts**  
+- Repeated incidents of vandalism, copper theft and armed interference with substations and related electricity infrastructure.
+- Localised outages and significant repair costs are regularly reported in open sources.
+- Armed confrontations between attackers and utility security or police have been documented.
+- These physical attacks are the most visible driver of infrastructure-related power interruptions in recent public reporting.
+
+### 4.2 Cyber Dimension
+
+- Academic and technical research (including work associated with the University of Johannesburg) has examined cyber vulnerabilities of distributed generation, particularly solar PV integration, and potential impacts on voltage stability and grid behaviour under attack scenarios.
+- This remains largely at the research and modelling level in public sources.
+- No large-scale, publicly confirmed cyber-induced blackout comparable to the European near-miss cases has been prominently documented in recent open reporting.
+
+### 4.3 Structural Context
+
+- South Africa has experienced prolonged periods of load-shedding driven by generation capacity, maintenance and systemic challenges.
+- These structural issues are distinct from cyber causes in public explanations, but they increase the overall sensitivity of the system to any additional disruption (physical or cyber).
+
+**Risk reading from open sources**  
+Physical security of grid assets currently dominates the public risk narrative. Cyber risk to distributed energy resources is acknowledged in research but is less visible in confirmed incident reporting than in Europe or the United States.
+
+---
+
+## 5. Asia – Expanded
+
+### 5.1 Espionage and Supply-Chain Focus
+
+**Public facts**  
+- Technical reporting has described campaigns attributed to Asian government-linked actors that compromised government agencies and critical infrastructure organisations across dozens of countries.
+- Targets have included energy-related entities and suppliers of power equipment.
+- Activity is predominantly characterised in open sources as intelligence collection, reconnaissance and access rather than as destructive operations intended to cause blackouts.
+
+### 5.2 Limited Public Confirmation of Destructive Grid Effects
+
+- Compared with the Polish near-miss and the historical Ukraine cases, recent open sources contain fewer independently confirmed, large-scale cyber-induced power outages in Asian countries.
+- This may reflect differences in reporting practices, actual targeting priorities, or both.
+- Absence of detailed public incident reports should not be read as evidence of low risk.
+
+### 5.3 Risk Characteristics Visible in Open Sources
+
+- Strong emphasis on long-term access and supply-chain compromise.
+- Power-equipment manufacturers and energy-sector organisations appear among the target sets in some campaigns.
+- Destructive effects on electricity supply remain less prominently documented in public sources than espionage effects.
 
 ---
 
@@ -107,6 +169,7 @@ From public incidents and advisories, recurring factors include:
 3. Insufficient segmentation between IT and OT
 4. Limited monitoring of engineering software connections from unusual locations
 5. Distributed energy resources with weaker security baselines than traditional large plants
+6. Physical security weaknesses that can compound or substitute for cyber effects (especially visible in South Africa)
 
 These are **defensive prioritisation signals**, not a description of attack methods.
 
@@ -116,10 +179,10 @@ These are **defensive prioritisation signals**, not a description of attack meth
 
 | Discipline | Contribution to this risk picture |
 |------------|-----------------------------------|
-| **TECHINT** | Identification of device types, protocols, exposure patterns and malware families reported in public advisories |
-| **OSINT** | Official statements, CISA/CERT reporting, media synthesis of government attributions |
-| **GEOINT** | Limited direct role in the pure cyber cases; more relevant for physical attacks on infrastructure (South Africa) and site characterisation |
-| **SOCMINT** | Secondary – claims and narrative amplification after incidents |
+| **TECHINT** | Device types, protocols, exposure patterns, malware families and OT effects reported in public advisories |
+| **OSINT** | Official statements, CISA/CERT reporting, government attributions, media synthesis |
+| **GEOINT** | More relevant for physical attacks on infrastructure (South Africa) and site characterisation than for pure remote cyber cases |
+| **SOCMINT** | Secondary – claims, narrative amplification and persona activity after incidents |
 
 ---
 
@@ -129,6 +192,7 @@ These are **defensive prioritisation signals**, not a description of attack meth
 - Real-time operational status of national grids under attack
 - Full attribution confidence in every case
 - Predictive certainty about the next major incident location
+- Comprehensive visibility into unsuccessful or unreported intrusions
 
 ---
 
