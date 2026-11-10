@@ -11,7 +11,8 @@ The purpose of this section is not to recreate full dossiers, but to extract **m
 | Case | Disciplines / Focus | Status | Link |
 |------|---------------------|--------|------|
 | Shahid Kaveh / CyberAv3ngers (IRGC-CEC) | TECHINT, OSINT, public attribution | Active | [Case notes](shahid-kaveh-case.md) |
-| **Cyber disruption / blackout risk – regional** | Risk analysis across Europe, USA, South Africa, Asia | Active | [Regional risk study](cyber-disruption-risk-regional.md) |
+| Cyber disruption / blackout risk – regional | Risk analysis across Europe, USA, South Africa, Asia + early warning | Active | [Regional risk study](cyber-disruption-risk-regional.md) |
+| **South Africa – electricity structures** | System structure, actors, physical vs cyber risk surface | Active | [Structures brief](south-africa-electricity-structures.md) |
 
 ---
 
