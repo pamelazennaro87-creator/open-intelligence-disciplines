@@ -28,14 +28,12 @@ This project sits in between. It aims to be:
 
 | Discipline | Focus | Status |
 |------------|-------|--------|
-| **OSINT** | Open-source information collection & analysis | Foundation |
-| **GEOINT** | Geospatial intelligence from imagery, maps, location data | Planned |
-| **SOCMINT** | Social media intelligence | Planned |
+| **OSINT** | Open-source information collection & analysis | Available |
+| **GEOINT** | Geospatial intelligence from imagery, maps, location data | Available |
+| **SOCMINT** | Social media intelligence | Available |
 | **TECHINT** | Technical intelligence (infrastructure, malware, tools, protocols) | Planned |
 | **FININT** | Financial intelligence from open sources | Planned |
 | **HUMINT (Open)** | Human-source information available in the public domain | Planned |
-
-Additional disciplines and hybrid approaches will be added over time.
 
 ---
 
@@ -45,7 +43,7 @@ Additional disciplines and hybrid approaches will be added over time.
 open-intelligence-disciplines/
 ├── README.md
 ├── methodology.md              ← Core principles and standards
-├── disciplines/                ← Individual discipline profiles
+├── disciplines/                ← Individual discipline profiles (with practical techniques)
 ├── comparisons/                ← Side-by-side analysis + frameworks
 ├── archive/                    ← Real-world case studies (Intel Archive)
 ├── visuals/                    ← Diagrams, matrices, process maps
@@ -57,13 +55,10 @@ open-intelligence-disciplines/
 ## Intel Archive
 
 The `archive/` section contains structured case studies drawn from public investigations.  
-These cases serve two purposes:
-
-1. Demonstrate how multiple disciplines interact in practice
-2. Provide reusable analytical examples
+These cases demonstrate how multiple disciplines interact in practice.
 
 Current entry:
-- Iranian state-aligned cyber activity (Shahid Kaveh / CyberAv3ngers) → multi-discipline case study linking TECHINT, OSINT and public attribution analysis.  
+- Iranian state-aligned cyber activity (Shahid Kaveh / CyberAv3ngers) → multi-discipline case study.  
   Full detailed repository: [iranian-apt-osint](https://github.com/pamelazennaro87-creator/iranian-apt-osint)
 
 ---
@@ -80,16 +75,20 @@ Current entry:
 
 ## Status
 
-**Current stage:** Foundation  
+**Current stage:** Expanding discipline coverage  
 **Last update:** 10 November 2026
 
-This repository is under active construction. Core methodology and structure are being established first.
+Available now:
+- OSINT, GEOINT and SOCMINT profiles with practical techniques
+- Methodology standards
+- Intel Archive (first case)
+- Visuals folder structure
 
 ---
 
 ## Related Work
 
-- [iranian-apt-osint](https://github.com/pamelazennaro87-creator/iranian-apt-osint) – Deep-dive case study on Iranian state-aligned cyber actors (TECHINT + OSINT focus)
+- [iranian-apt-osint](https://github.com/pamelazennaro87-creator/iranian-apt-osint) – Deep-dive case study on Iranian state-aligned cyber actors
 
 ---
 
