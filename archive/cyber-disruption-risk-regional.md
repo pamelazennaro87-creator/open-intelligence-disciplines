@@ -175,7 +175,56 @@ These are **defensive prioritisation signals**, not a description of attack meth
 
 ---
 
-## 8. Multi-Discipline Lessons
+## 8. Early Warning Indicators (Observable from Public / Defensive Perspective)
+
+Early warning in this context means **observable signals that, in past public cases, appeared before or during the escalation of disruptive activity**. They are prioritised for defensive monitoring and information sharing, not for offensive use.
+
+### 8.1 Technical / Infrastructure Indicators (High practical value)
+
+| Indicator | Why it mattered in public cases | Suggested defensive response |
+|-----------|----------------------------------|------------------------------|
+| Sudden increase in internet-exposed OT / edge devices associated with energy, water or industrial control | Recurring initial access surface in Poland, U.S. water cases and related advisories | Continuous discovery and reduction of exposure; MFA and credential hygiene |
+| Scanning or probing activity against industrial protocols and known OT management interfaces | Frequently precedes deeper intrusion in documented campaigns | Alerting on unusual external connection attempts to OT-related ports and services |
+| Use of vendor engineering software (or remote access tools) from atypical geographic locations or hosting providers | Noted as a blending technique in some OT-focused operations | Baseline normal remote engineering access; alert on anomalies |
+| Appearance of default or factory credentials still valid on reachable devices | Explicitly cited in the Poland incident and multiple CISA-related warnings | Systematic credential audit of OT assets |
+| Loss of view or intermittent loss of control on HMIs / SCADA without clear physical cause | Early operational symptom in the Poland case before wider impact | Rapid escalation path between OT operators and cyber teams |
+
+### 8.2 Organisational and Reporting Indicators
+
+| Indicator | Relevance |
+|-----------|-----------|
+| Official advisories (CISA, national CERTs, sector ISACs) highlighting specific device families or sectors | Often lag the first intrusions but still provide actionable prioritisation |
+| Clustered reporting of similar low-level OT anomalies across multiple organisations in the same sector or country | May indicate a broader campaign rather than isolated misconfiguration |
+| Public claims or persona activity referencing industrial or energy targets | Secondary signal; useful for correlation after technical indicators appear |
+
+### 8.3 Contextual / Hybrid Indicators
+
+| Indicator | Relevance |
+|-----------|-----------|
+| Heightened geopolitical tension combined with prior targeting of the same sector | Increases likelihood that opportunistic or directed activity will be attempted |
+| Parallel physical security incidents against the same class of infrastructure (visible especially in South Africa) | Raises overall system stress and may mask or compound cyber effects |
+| Sudden changes in the visibility or behaviour of known threat personas associated with OT disruption | Supporting, not primary, signal |
+
+### 8.4 What Is Not a Reliable Early Warning on Its Own
+
+- Single unverified social-media claims
+- Generic “threat actor is interested in energy” statements without technical indicators
+- Isolated scanning that is indistinguishable from background internet noise
+- Attribution debates that consume attention without driving defensive action
+
+### 8.5 Practical Priority Order for Defenders (Derived from Public Cases)
+
+1. **Reduce internet exposure** of OT and edge devices  
+2. **Eliminate default and weak credentials** on industrial equipment  
+3. **Monitor for anomalous remote engineering / vendor access**  
+4. **Establish clear escalation paths** between OT operators and cyber security teams when loss of view/control occurs  
+5. **Track official advisories** and sector information-sharing for device- and sector-specific warnings  
+
+These steps address the conditions that repeatedly appeared in the public incidents summarised above.
+
+---
+
+## 9. Multi-Discipline Lessons
 
 | Discipline | Contribution to this risk picture |
 |------------|-----------------------------------|
@@ -186,7 +235,7 @@ These are **defensive prioritisation signals**, not a description of attack meth
 
 ---
 
-## 9. What Open Sources Do Not Reliably Show
+## 10. What Open Sources Do Not Reliably Show
 
 - Complete maps of vulnerable assets
 - Real-time operational status of national grids under attack
@@ -196,7 +245,7 @@ These are **defensive prioritisation signals**, not a description of attack meth
 
 ---
 
-## 10. Status and Use
+## 11. Status and Use
 
 This case study is intended as a **structured risk overview** for portfolio and analytical use.  
 It should be read alongside the Shahid Kaveh / CyberAv3ngers archive entry and the discipline profiles (especially TECHINT and OSINT).
