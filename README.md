@@ -44,8 +44,8 @@ open-intelligence-disciplines/
 ├── README.md
 ├── methodology.md              ← Core principles and standards
 ├── disciplines/                ← Individual discipline profiles (with practical techniques)
-├── comparisons/                ← Side-by-side analysis + frameworks
 ├── archive/                    ← Real-world case studies (Intel Archive)
+├── monitoring/                 ← Defensive monitoring dashboard
 ├── visuals/                    ← Diagrams, matrices, process maps
 └── checklists/                 ← Practical operational checklists
 ```
@@ -54,12 +54,22 @@ open-intelligence-disciplines/
 
 ## Intel Archive
 
-The `archive/` section contains structured case studies drawn from public investigations.  
-These cases demonstrate how multiple disciplines interact in practice.
+Structured case studies drawn from public investigations:
 
-Current entry:
-- Iranian state-aligned cyber activity (Shahid Kaveh / CyberAv3ngers) → multi-discipline case study.  
-  Full detailed repository: [iranian-apt-osint](https://github.com/pamelazennaro87-creator/iranian-apt-osint)
+| Case | Focus | Link |
+|------|-------|------|
+| Shahid Kaveh / CyberAv3ngers | Multi-discipline TECHINT + OSINT case | [Case notes](archive/shahid-kaveh-case.md) |
+| Cyber disruption / blackout risk | Regional risk analysis (Europe, USA, South Africa, Asia) + early warning indicators | [Regional study](archive/cyber-disruption-risk-regional.md) |
+
+Full detailed Iranian APT repository: [iranian-apt-osint](https://github.com/pamelazennaro87-creator/iranian-apt-osint)
+
+---
+
+## Monitoring
+
+Defensive monitoring frame derived from the risk cases:
+
+- [Monitoring Dashboard](monitoring/dashboard.md) – Early warning indicator tracker, regional watch boards, response priority ladder
 
 ---
 
@@ -75,13 +85,14 @@ Current entry:
 
 ## Status
 
-**Current stage:** Expanding discipline coverage  
+**Current stage:** Expanding practical application layers  
 **Last update:** 10 November 2026
 
 Available now:
 - OSINT, GEOINT and SOCMINT profiles with practical techniques
 - Methodology standards
-- Intel Archive (first case)
+- Intel Archive (two major cases)
+- Defensive monitoring dashboard
 - Visuals folder structure
 
 ---
